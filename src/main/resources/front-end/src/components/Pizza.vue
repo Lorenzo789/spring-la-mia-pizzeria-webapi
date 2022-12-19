@@ -132,4 +132,33 @@ h1{
     text-align: center;
 }
 
+.margin-form{
+    margin: 10px 0px;
+}
+
+.btn{
+    padding: 5px 10px;
+    margin: 0px 5px 10px 5px;
+}
+
+.btn-modify{
+    background-color: gold;
+    border-color: gold;
+    border-radius: 5px;
+}
+
+.btn-submit{
+    background-color: green;
+    border-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-cancel{
+    background-color: crimson;
+    border-color: crimson;
+    color: white;
+    border-radius: 5px;
+}
+
 </style>
