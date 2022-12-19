@@ -17,12 +17,6 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-		<!-- dependency per la security-->
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<!-- dependency per la security-->
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
