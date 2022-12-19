@@ -2,6 +2,8 @@ package org.generation.italy.demo.pojo;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class Ingredient {
 	
 	//non mettere il cascade sulle manytomany
 	@ManyToMany(mappedBy = "ingredients")
+	@JsonIgnore
 	private List<Pizza> pizze;
 
 	public Ingredient() {}

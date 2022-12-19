@@ -2,6 +2,8 @@ package org.generation.italy.demo.pojo;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,7 +37,8 @@ public class Pizza {
 	@Min(value = 1, message = "the price must be bigger than 0")
 	private int price;
 	
-	@ManyToMany
+	@ManyToMany	
+	@JsonIgnore
 	private List<Ingredient> ingredients;
 	
 	public Pizza() {}
