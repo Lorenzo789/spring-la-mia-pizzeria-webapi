@@ -78,6 +78,10 @@ export default {
             return -1;
         },
 
+        getPizzaIndex(id) {
+            return this.pizze[this.getPizzaIndexById(id)];
+        },
+
         pizzaUpdate(e){
             e.preventDefault();
 
@@ -86,13 +90,13 @@ export default {
 
             this.pizzaEdit(PIZZA_ID_EDIT);
 
-            axios.post(URL_PIZZE + "/pizza/update/" + id, pizza)
+            axios.post(URL_PIZZE + "/update/" + id, pizza)
             .then((response) => {
 
-                const index = this.getPizza(id);
-                const oldPizza = this.pizze[index];
+                const index = this.getPizzaIndex(id);
+                // const oldPizza = this.pizze[index];
                 const pizza = res.data;
-
+                
                 this.pizze[index] = pizza;
 
             })
